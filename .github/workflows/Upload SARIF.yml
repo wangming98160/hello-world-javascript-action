@@ -19,6 +19,7 @@ jobs:
       - name: Upload SARIF file
         uses: wangming98160/hello-world-javascript-action@v1.1
         with:
+          who-to-greet: 'Mona the Octocat'
           #Path to SARIF file relative to the root of the repository
           sarif_file: results.sarif
           #Optional category for the results
