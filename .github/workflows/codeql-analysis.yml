@@ -53,13 +53,6 @@ jobs:
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Autobuild
       uses: github/codeql-action/autobuild@v1
-    - name: Checkout repository
-      uses: wangming98160/hello-world-javascript-action@v1.1
-    - name: Upload SARIF file
-      uses: wangming98160/hello-world-javascript-action@v1.1
-      with:
-          # Path to SARIF file relative to the root of the repository
-        sarif_file: results.sarif
-         # Optional category for the results
-          # Used to differentiate multiple results for one commit
-        category: my-analysis-tool
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v1
+
